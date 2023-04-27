@@ -1,0 +1,65 @@
+header {
+  width: 100%;
+  background-color: aquamarine;
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+    z-index: 999;
+    width: 100%;
+
+    img {
+      width: 12rem;
+      max-width: 15rem;
+      margin-left: 5rem;
+    }
+
+    .nav-items {
+      display: flex;
+      width: 50%;
+      max-width: 40rem;
+      justify-content: space-between;
+      align-items: center;
+      gap: 5rem;
+
+      .insta-icon {
+        color: #d62976;
+      }
+      a {
+        color: black;
+      }
+
+      li {
+        font-size: 2rem;
+      }
+      @media (max-width: 767px) {
+        display: none;
+
+        &.active{
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          width: 100%;
+          max-width: 100%;
+          z-index: 999;
+          background-color: var(--white);
+          height: 30vh;
+          margin: auto;
+          left: 0;
+          padding: 2rem 0;
+          top: 7rem;
+        }
+      }
+    }
+
+    .hamburger {
+      display: none;
+      @media (max-width: 767px) {
+        display: block;
+      }
+    }
+  }
+}
